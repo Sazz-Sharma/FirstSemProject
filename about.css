@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+  
+  body {
+    background-color: #3F3D56;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    height: auto;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .logo::after{
+    background: white;
+    display: block;
+    content: "";
+    width: 0px;
+    height: 2px;
+    transition: .4s;
+    /* color: #f8b600; */
+  }
+  .logo:hover::after{
+    width: 100%;
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+  
+  .menu-btn__line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+  }
+  
+  .menu li {
+    margin-left: 20px;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .menu a::after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: rgb(255, 255, 255);
+    /* background-color: #f2385d; */
+    transition: .4s;
+  }
+  
+  .menu a:hover::after {
+    width: 100%;
+  }
+  
+  
+  #menu-toggle {
+    display: none;
+  }
+
+
+@media screen and (min-width: 750px){
+#heading{
+    
+    /* position: absolute; */
+    top: 10%;
+    left: 50%;
+}
+h1{
+    text-align: center;
+    color: #fff;
+}
+#about{
+    /* overflow: hidden; */
+    height: 100vh;
+    /* width: 100vw; */
+}
+#shortIntro{
+    position: relative;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    height: 100%;   
+}
+
+.astro_svg{
+    position: absolute;
+    top: 13%;
+    left: 90%;
+    animation: astro_animation 10s infinite;
+}
+@keyframes astro_animation {
+    0%{
+        top: 13%;
+        left: 80%;
+    }
+    25%{
+        top:17%;
+        left: 79%;
+    }
+    50%{
+        top: 13%;
+        left: 80%;
+    }
+    75%{
+        top:17%;
+        left: 79%;
+    }
+    100%{
+        top: 13%;
+        left: 80%;
+    }
+}
+    #introPara::before{
+        content: ' ';
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 0%;
+    left: -1%;
+    /* transform: translate(0%, -50%); */
+    background-color: #f2385d;
+    height: 100%;
+    width: 5px;
+    animation: introLine_animation 2s ease-in-out;
+}
+@keyframes introLine_animation {
+    from{
+        height: 0vh;
+    }
+    to{
+        height: 100%;
+    }
+}
+#introPara{
+    text-align: justify;
+    /* border: 2px solid black; */
+    color: #fff;
+    /* font-size: 1.2vh; */
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 16%;
+    /* height: 30vh; */
+    width: 65vw;
+}
+#skills{
+    height: 100vh;
+    width: 100vw;
+}
+}
+
+  @media screen and (max-width: 750px) {
+    .menu a{
+      display: none;
+      transition: all .2s ease-in-out;
+    }
+     .menu {
+      
+      transform: scale(100% , 0);
+      transition: transform .2s ease-in-out;
+      /* top: -40%;
+      opacity: 0%; */
+      /* transition: height 0.5s ease-in-out, opacity 0.1s ease-in-out; */
+    }
+  
+    .menu-btn {
+      display: flex;
+      
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      cursor: pointer;
+      z-index: 1;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  
+    .menu-btn__line {
+      background-color: #fff;
+    }
+    #menu-toggle:checked ~ .menu {
+      /* transition: display 2s linear; */
+      transform: scale(100%, 100%);
+      transform-origin: top;
+      opacity: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(63, 61, 86, .74);
+      color: #fff;
+      padding: 20px;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      z-index: 998;
+    } 
+  
+    #menu-toggle:checked ~ .menu li {
+      margin-left: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  
+    #menu-toggle:checked ~ .menu a {
+      display: inline;
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+    body{
+      height: 100vh;
+      width: 100%;
+    }
+    #about{
+      height: 100vh;
+      width: 100vw;
+    }
+
+    #astro_img{
+        height: 60vh;
+        /* width: 60vw; */
+    }
+    .astro_svg{
+        position: absolute;
+        top: 13%;
+        left: 60%;
+        animation: astro_animation 10s infinite;
+    }
+    @keyframes astro_animation {
+        0%{
+            top: 13%;
+            left: 60%;
+        }
+        25%{
+            top:17%;
+            left: 59%;
+        }
+        50%{
+            top: 13%;
+            left: 60%;
+        }
+        75%{
+            top:17%;
+            left: 59%;
+        }
+        100%{
+            top: 13%;
+            left: 60%;
+        }
+    }
+    #introPara::before{
+        content: ' ';
+        /* border: 2px solid red; */
+        position: absolute;
+        top: 0%;
+        left: -4%;
+        background-color: #f2385d;
+        /* background-color: white; */
+        /* height: 82vh; */
+        /* height: 72%; */
+        height: 100%;
+        width: 5px;
+        animation: introLine_animation_out 2s ease-in-out;
+    }
+    @keyframes introLine_animation_out {
+        from{
+            height: 0%;
+        }
+        to{
+            /* height: 72%; */
+        }
+    }
+    #introPara{
+        text-align: justify;
+        /* border: 2px solid black; */
+        color: #fff;
+        /* font-size: 1.2vh; */
+        position: absolute;
+        top: 20%;
+        left: 16%;
+        /* height: 30vh; */
+        width: 70%;
+    }
+
+}
+
+
+/* GPT debugged */

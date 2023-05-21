@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="contactstyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+          <div class="logo">
+            <a href="index.html">My Portfolio</a>
+          </div>
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-btn">
+          
+            <span class="menu-btn__line"></span>
+            <span class="menu-btn__line"></span>
+            <span class="menu-btn__line"></span>
+          
+          </label>
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+ 
+  <section id="home">
+    <div id="formdiv">
+            <div class="eachfield">
+                <h1>Contact Me</h1>
+            </div>
+            <div class="eachfield">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="eachfield">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
+            <div class="eachfield">
+                <label for="txt">Query:</label>
+                <input type="text" id="txt">
+            </div>
+            <div class="eachfield">
+                <button>Submit</button>
+            </div>
+    </div>
+  </section>
+
+  <!-- Add other sections as needed -->
+
+  <footer>
+    <p>&copy; 2023 SazzSharma. All rights reserved.</p>
+  </footer>
+  <script src="contactjs.js"></script>
+</body>
+</html>
