@@ -17,15 +17,16 @@ function createStar(ids) {
     const maxY = containerHeight - star.offsetHeight -3;
   
     // Generate initial positions within the container bounds
-    let initialX = Math.random() * 100;
-    let initialY = Math.random() * 100;
-    star.style.left = `${initialX}%`;
-    star.style.top = `${initialY}vh`;
+    let initialX = Math.random() * maxX;
+    let initialY = Math.random() * maxY;
+    star.style.left = `${initialX}px`;
+    star.style.top = `${initialY}px`;
   
     document.getElementById('home').appendChild(star);
     // console.log(star.getBoundingClientRect().top);
     // Generate individual animation for each star
     // const animationDuration = Math.random() * 500 + 5;
+
     const animationDuration =  Math.random()* 500 + 200;
     const translateXKeyframes = [initialX, Math.random() * maxX, initialX];
     const translateYKeyframes = [initialY, Math.random() * maxY, initialY];
@@ -50,8 +51,14 @@ function createStar(ids) {
   
     return star;
   }
+
+  // for (let i = 0; i < 250; i++){
+  //   createStar(i)
+  // }
   
-  for (i = 0; i < 250; i++) {
-    createStar(i);
+  for (let i = 0; i < 250; i++) {
+    setTimeout(()=>{
+      createStar(i)
+    },50)
   }
   

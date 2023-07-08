@@ -54,9 +54,12 @@ function createStar(ids) {
     return star;
   }
   
-  for (i = 0; i < 250; i++) {
-    createStar(i);
+  for (let i = 0; i < 250; i++) {
+    setTimeout(()=>{
+      createStar(i)
+    },50)
   }
 }
+
 makeStars('about')
 // makeStars('skills')
