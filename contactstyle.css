@@ -92,67 +92,7 @@
     display: none;
   }
   
-  @media screen and (max-width: 768px) {
-    .menu a{
-      display: none;
-      transition: all .2s ease-in-out;
-    }
-     .menu {
-      
-      transform: scale(100% , 0);
-      transition: transform .2s ease-in-out;
-      /* top: -40%;
-      opacity: 0%; */
-      /* transition: height 0.5s ease-in-out, opacity 0.1s ease-in-out; */
-    }
-  
-    .menu-btn {
-      display: flex;
-      
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 21px;
-      cursor: pointer;
-      z-index: 1;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-  
-    .menu-btn__line {
-      background-color: #fff;
-    }
-    #menu-toggle:checked ~ .menu {
-      /* transition: display 2s linear; */
-      transform: scale(100%, 100%);
-      transform-origin: top;
-      opacity: 100%;
-      display: flex;
-      flex-direction: column;
-      background-color: rgba(63, 61, 86, .74);
-      color: #fff;
-      padding: 20px;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      width: 100%;
-      z-index: 998;
-    } 
-  
-    #menu-toggle:checked ~ .menu li {
-      margin-left: 0;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-  
-    #menu-toggle:checked ~ .menu a {
-      display: inline;
-      color: #fff;
-      font-size: 20px;
-      transition: color 0.3s ease;
-    }
-  }
+
   
   #home {
     height: 100vh;
@@ -258,4 +198,69 @@
     color: #fff;
     padding: 20px;
     text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu a{
+      display: none;
+      transition: all .2s ease-in-out;
+    }
+     .menu {
+      
+      transform: scale(100% , 0);
+      transition: transform .2s ease-in-out;
+      /* top: -40%;
+      opacity: 0%; */
+      /* transition: height 0.5s ease-in-out, opacity 0.1s ease-in-out; */
+    }
+  
+    .menu-btn {
+      display: flex;
+      
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      cursor: pointer;
+      z-index: 1;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  
+    .menu-btn__line {
+      background-color: #fff;
+    }
+    #menu-toggle:checked ~ .menu {
+      /* transition: display 2s linear; */
+      transform: scale(100%, 100%);
+      transform-origin: top;
+      opacity: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(63, 61, 86, .74);
+      color: #fff;
+      padding: 20px;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      z-index: 998;
+    } 
+  
+    #menu-toggle:checked ~ .menu li {
+      margin-left: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  
+    #menu-toggle:checked ~ .menu a {
+      display: inline;
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+    #formdiv{
+      width: 90%;
+    }
   }

@@ -68,7 +68,7 @@ function createStar(ids) {
   star.style.top = `${initialY}px`;
 
   document.getElementById("home").appendChild(star);
-  console.log(star.getBoundingClientRect().top);
+
 
   // Generate individual animation for each star
   // const animationDuration = Math.random() * 500 + 5;
@@ -97,8 +97,10 @@ function createStar(ids) {
   return star;
 }
 
-for (i = 0; i < 250; i++) {
-  createStar(i);
+for (let i = 0; i < 250; i++) {
+  setTimeout(()=>{
+    createStar(i);
+  },10)
 }
 
 

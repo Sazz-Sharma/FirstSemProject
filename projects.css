@@ -155,8 +155,8 @@
     top: 50%;
     left: 10%; */
     transform: translate(0%, 0%);
-    width: 90%;
-    transition: width .2s ease-in-out;
+    width: 50%;
+    transition: all .2s ease-in-out;
     animation: grow 1s ease-in-out;
   }
   @keyframes grow{
@@ -170,6 +170,7 @@
 .sectionProjects>img:hover{
     width: 100%;
     cursor: pointer;
+
 }
 /* .menu>li:nth-child(2){
   color: red;
